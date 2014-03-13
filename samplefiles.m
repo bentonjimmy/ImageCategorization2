@@ -13,7 +13,9 @@ if(isdir(directory))
            j = j + 1;
        end
     end
-    if(samplesize > length(files))
+    if(strcmpi(samplesize, 'all') == 1)
+       samplesize = length(files); 
+    elseif(samplesize > length(files))
        samplesize = length(files); 
     end
     samparray = zeros(samplesize, pointssampled);
