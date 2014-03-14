@@ -33,7 +33,7 @@ if(isdir(directory))
        image = imread(toread); %Load the image
        s = sample(image, pointssampled); %Sample the image
        for j=1:length(s)
-          samparray(i, j) = s(j); %Put the sampled points into the sample array 
+          samparray(i, j) = s(j); %Put the sampled points into the sample array; this may be slow!
        end
        clear image; %remove the image
     end
