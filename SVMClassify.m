@@ -1,6 +1,10 @@
 function [Scores, maxScore] = SVMClassify(SVMModels, classify, numOfClasses)
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+%SVMClassify is used to classify the feature vectors using the given models
+%   Using the SVM models passed in SVMModels, the feature vectos in
+%   classify will be classified into numOfClasses classes.  This function
+%   takes the one-versus-all approach to SVM multi-classification, meaning
+%   that it will predict the classes of each feature vector numOfClasses
+%   times.
 
 %Use Models to predict the points in classify
 for c=1:numOfClasses

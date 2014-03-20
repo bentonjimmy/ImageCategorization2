@@ -1,8 +1,0 @@
-function [IDX, D] = addToCluster(points, centroids)
-%addToCluster Find the nearest n
-%   Detailed explanation goes here
-
-[IDX, D] = knnsearch(centroids, points, 'k', height(centroids));
-
-end
-
